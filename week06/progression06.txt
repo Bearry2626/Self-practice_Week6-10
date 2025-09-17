@@ -1,0 +1,14 @@
+sep 17 
+
+ในคาบทวนเนื้อหาเก่า
+- Function , Firt-Class, Higher-Order Functions
+
+เนื้อหาใหม่
+- Declarative Code
+- Immutability
+- Pure Functions
+- Function Composition
+- Function Types
+- Function Scope
+- Closures 
+** ท้ายความมี Practice 2 อัน + Project ให้ทำเป็น Self-Practice
