@@ -24,16 +24,18 @@ console.log(result)
 
 
 // ระดับปานกลาง (Intermediate)
-
-// Immutability
-
+// 1. Immutability
 // มี array scores = [45, 67, 89, 32, 100]
-
 // เขียนฟังก์ชันที่ ไม่เปลี่ยนค่าเดิมของ array แต่สร้าง array ใหม่ที่เพิ่ม 5 คะแนนให้ทุกคน
-
 // จากนั้น filter เฉพาะคนที่สอบได้เกิน 70 คะแนน
-
 // สุดท้าย หาผลรวมคะแนนทั้งหมด
+let scores = [45, 67, 89, 32, 100]
+let sum = scores.map(num=> num +5).filter(num => num > 70)
+
+
+console.log(sum)
+
+
 
 // Pure vs Impure Function
 
