@@ -36,9 +36,31 @@ let sum = scores.map(num=> num +5).filter(num => num > 70)
 console.log(sum)
 
 
-
-// Pure vs Impure Function
-
+// 2.Pure vs Impure Function
 // เขียน ฟังก์ชัน impure ที่ใช้ Math.random() ในการสุ่มตัวเลขแล้วบวกกับค่าที่รับเข้ามา
-
 // แล้วเขียน pure function ที่เลียนแบบพฤติกรรมเดียวกัน แต่ต้องส่งค่า "seed" เข้ามาแทนการสุ่ม
+// Impure Function
+function Impure(ramdom){
+    return ramdom + Math.random()
+}
+
+console.log(Impure(1))
+console.log(Impure(1))
+
+
+// pure function 
+function random(seed) {
+    const a = 2
+    const b = 5
+    const c = 6
+
+    return (a * seed + b) % c
+}
+
+function pure(x, seed){
+    const thissedd = random(seed)
+    const vrandom = thissedd * 2
+    return x + vrandom
+}
+console.log(pure(10, 10))
+console.log(pure(10, 10))
