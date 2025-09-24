@@ -64,3 +64,8 @@ function pure(x, seed){
 }
 console.log(pure(10, 10))
 console.log(pure(10, 10))
+
+const set = new Set(['hello', 'world']);
+for (const elem of set) {
+console.log(elem);
+}
