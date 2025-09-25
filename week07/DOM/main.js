@@ -20,8 +20,7 @@ console.log(document.firstElementChild.previousSibling) //<!-- sample comment #1
 console.log(document.lastChild) //<!-- sample comment #3 -->
 console.log(document.lastElementChild) //<html lang="en">
 
-// มีคำว่า Element แสดงว่าเป็น element node
-// ไม่มีคำว่า Element แสดงว่าเป็น node ทั่วไป ไม่สนใจว่าเป็น element
+
  
 // 1. get all child nodes uder <div id = '123'>
 const divElement = document.getElementById("123")
@@ -58,14 +57,5 @@ for (let i = 0; i < divattrs.length; i++) {
 console.log(divElement1.getAttribute("id")) // หา arttribute value โดยใช้ attribute name
 console.log(divElement1.getAttribute("style")) // หา arttribute value โดยใช้ attribute name
 
-// 093 ทัศนัยภูวดล
-// 1. What is the node type of firstChild of root node?
-console.log(document.firstChild.nodeType)
-// 2. if node type is an HTML node, display "Hello, HTML node", otherwise ,display "Hello, any node"
-if (document.firstChild.nodeType === 1) {
-  console.log("Hello, HTML node")
-} else {
-  console.log("Hello, any node")
-}   
 
 const pElement = document.createElement("p") // สร้าง element p

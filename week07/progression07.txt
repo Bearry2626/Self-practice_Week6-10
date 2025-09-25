@@ -3,14 +3,23 @@ Sep 24
 1. DOM
 root element != root node 
 
-parent = 
-child = 
-sibling = ลูกพี่ลูกน้อง
-anster = 
-descendant = 
+parent = พ่อ/แม่ของ node
+child = ลูกของ node
+sibling = ลูกพี่ลูกน้องของ node
+ancestor = node ใด ๆ ที่อยู่เหนือ node ปัจจุบัน
+descendant = node ใด ๆ ที่อยู่ใต้ node ปัจจุบัน 
 
 - document root node ลูกคนแรกคือ Doctype
 - การ Enter มันจะนับเป็น text node 
 
+**ควรจำ
+มีคำว่า Element แสดงว่าเป็น element node
+ไม่มีคำว่า Element แสดงว่าเป็น node ทั่วไป ไม่สนใจว่าเป็น element
+
+get children มีได้ 2 แบบ
+1. childNodes (all node type) ได้ลูกทั้งหมด
+2. children (element type only) ได้ลูกที่เป็น element เท่านั้น
+
 2. Nodes Types
-มีทั้งหมด 12 อัน แต่ 5 , 6 , 12 deprecated ไปแล้ว
+มีทั้งหมด 12 อัน แต่ 5, 6, 12 deprecated ไปแล้ว
+**อจ ให้ลิ้งค์มาอย่าลืมอ่านเพิ่ม!!! 
