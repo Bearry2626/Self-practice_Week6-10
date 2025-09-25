@@ -23,3 +23,12 @@ get children มีได้ 2 แบบ
 2. Nodes Types
 มีทั้งหมด 12 อัน แต่ 5, 6, 12 deprecated ไปแล้ว
 **อจ ให้ลิ้งค์มาอย่าลืมอ่านเพิ่ม!!! 
+
+**ควรจำ
+- เวลาเรียก nodeType มันจะเรียก value ออกมา แต่อ้างถึงตัวพิมพ์ใหญ่ได้ ดูจากตารางได้
+- บางอันไม่มี NodeValue เป็น null เพราะบาง type ไม่มี
+เช่น ถ้าเป็ฯ element type จะกลายเป็นชื่อ tag => Element.tagName
+ถ้าเป็น type อื่น จะกลายเป็น # ตามด้วยชื่อ tag => "#document"
+
+**สิ่งระวัง 
+- เวลาเอา childNodes มาใช้ ระวัง Enter whitr space ระหว่าง tag => output เจอ whitr space แทน
