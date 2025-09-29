@@ -70,5 +70,11 @@ __________________________________________
 ทุก Node มันถูกถ่ายทอดจาก Node interface
 Node interface มี property กับ method ที่ใช้ได้กับทุก node type
 ------------------------------------------------------------------------------------------------------------------------
+**common properties
+const divElement = document.getElementById('123')
+console.log(divElement.nodeName)
+console.log(divElement.nodeType)
+console.log(divElement.nodeValue)
+
 **สิ่งระวัง 
 - เวลาเอา childNodes มาใช้ ระวัง Enter whitr space ระหว่าง tag => output เจอ whitr space แทน
