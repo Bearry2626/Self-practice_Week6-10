@@ -1,21 +1,20 @@
 console.log(window.document) //root node
 console.log(document) //root node
-console.log(typeof document)
-console.log(document.getElementById("123"))
-const htmlElement = document.documentElement
+console.log(typeof document)  //object
+console.log(document.getElementById("123")) //คือ element node ทีมันจะหา element ที่มี id=123 id ต้องไม่ซ้ำกัน
+const htmlElement = document.documentElement // คือ  <html> element
 console.log(htmlElement)
 
-console.log(htmlElement.parentElement) //null
-console.log(htmlElement.parentNode) //root node
-if (htmlElement.parentNode === document) {
+console.log(htmlElement.parentElement) //null จะแสดง parent element ของ <html> ซึ่งไม่มี
+console.log(htmlElement.parentNode) //root node จะแสดง parent node ของ <html> ซึ่งคือ root node หรือ document
+if (htmlElement.parentNode === document) { // parent Node ของ html = document 
   console.log("parent of html is a root node")
 }
-
-console.log(document.firstChild) //<!DOCTYPE html>
-console.log(document.firstChild.nextSibling)
+console.log(document.firstChild) //<!DOCTYPE html> จะแสดงตัวแรกที่อยู่ใน document
+console.log(document.firstChild.nextSibling) // จะแสดงตัวที่ 2 ที่อยู่ใน document
 //<!-- sample comment #1 -->
 console.log(document.firstChild.previousSibling) //null
-console.log(document.firstElementChild) //<html>
+console.log(document.firstElementChild) //<html> จะแสดง element แรกที่อยู่ใน document
 console.log(document.firstElementChild.previousSibling) //<!-- sample comment #1 -->
 console.log(document.lastChild) //<!-- sample comment #3 -->
 console.log(document.lastElementChild) //<html lang="en">
@@ -30,6 +29,7 @@ console.log(divChildNodes.length)
 divChildNodes.forEach((child) => console.log(child))
 
 // 3. get only element type children (return (dinamic) HTMLCollection, cannot use foreach)
+// มีอยู่ 2 ทาง คือ 1.for ธรรมดา 2.แปลงเป็น array ก่อน
 const divChildren = divElement.children 
 console.log(divChildren.length)  // ดหลือ 2 เพราะมันคัดกรอง  Element node
 // คิดไรไม่ออกใช้ for loop
@@ -38,9 +38,6 @@ console.log(divChildren.length)  // ดหลือ 2 เพราะมัน�
 // }
 Array.from(divChildNodes).forEach((child) => console.log(child)) // แปลงเป็น array ก่อนถึงจะใช้ foreach ได้
 
-//  get children มีได้ 2 แบบ
-// 1. childNodes (all node type) ได้ลูกทั้งหมด
-// 2. children (element type only) ได้ลูกที่เป็น element เท่านั้น
 
 const divElement1 = document.getElementById("123") 
 // 1. get all available parent nodes of <div id = '123'>

@@ -1,7 +1,7 @@
 Sep 24
 ในคลาสมีเนื้อหาเรียนคือ
 1. DOM
-root element != root node 
+root element != root node เพราะ 
 
 parent = พ่อ/แม่ของ node
 child = ลูกของ node
@@ -11,15 +11,37 @@ descendant = node ใด ๆ ที่อยู่ใต้ node ปัจจุ
 
 - document root node ลูกคนแรกคือ Doctype
 - การ Enter มันจะนับเป็น text node 
-
+--------------------------------------------------------------------------------------------------------------------------------------------
 **ควรจำ
 มีคำว่า Element แสดงว่าเป็น element node
 ไม่มีคำว่า Element แสดงว่าเป็น node ทั่วไป ไม่สนใจว่าเป็น element
-
+--------------------------------------------------------------------------------------------------------------------------------------------
+first child = ตัวแรกที่อยู่ใน node
+last child = ตัวสุดท้ายที่อยู่ใน node
+first element child = element แรกที่อยู่ใน node
+last element child = element สุดท้ายที่อยู่ใน node
+next sibling = ตัวถัดไปที่อยู่ใน node เดียวกัน
+previous sibling = ตัวก่อนหน้าที่อยู่ใน node เดียวกัน
+next element sibling = element ถัดไปที่อยู่ใน node เดียวกัน
+previous element sibling = element ก่อนหน้าที่อยู่ใน node เดียวกัน
+--------------------------------------------------------------------------------------------------------------------------------------------
 get children มีได้ 2 แบบ
-1. childNodes (all node type) ได้ลูกทั้งหมด
-2. children (element type only) ได้ลูกที่เป็น element เท่านั้น
+1. childNodes (all node type) ได้ลูกทั้งหมด get all child with any node type => return NodeList ใช้ foreach/fori ได้
+2. children (element type only) ได้ลูกที่เป็น element type เท่านั้น 
+--------------------------------------------------------------------------------------------------------------------------------------------
+วิธีเข้าถึง Attribute
+ใช้ .attributes ต่อได้เลย
+EX. const divAttrs = divElement.attributes
+**อยากได้ attributes ไหน ให้ไป Nodesนั้น -> query -> เข้าถึง propoty attributes
 
+**attribute ใช้ for of ได้ เพราะเป็น type namedNodeMap enumerable
+get attribute name -> .name
+get attribute value -> .value 
+บอก Element ที่ attribute นี้เป็นของใคร -> .ownerElement
+หา arttribute value โดยใช้ attribute name -> .getAttribute("ถามvalue มัน")
+หา arttribute value โดยใช้ attribute name -> .getAttribute("ถามvalue มัน") 
+- อยากได้แต่ละตัวอจ. แนะนำให้วนลูปเพราะง่ายสุด
+------------------------------------------------------------------------------------------------------------------------
 2. Nodes Types
 มีทั้งหมด 12 อัน แต่ 5, 6, 12 deprecated ไปแล้ว
 **อจ ให้ลิ้งค์มาอย่าลืมอ่านเพิ่ม!!! 
