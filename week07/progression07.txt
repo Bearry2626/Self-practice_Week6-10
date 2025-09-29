@@ -45,12 +45,30 @@ get attribute value -> .value
 2. Nodes Types
 มีทั้งหมด 12 อัน แต่ 5, 6, 12 deprecated ไปแล้ว
 **อจ ให้ลิ้งค์มาอย่าลืมอ่านเพิ่ม!!! 
+__________________________________________
+|Node types                               |
+|_________________________________________|
+|1. **Element node    = HTML element        |
+|2. **Attribute node (deprecated)           |
+|3. **Text node       = text                |
+|4. CDATA section node (deprecated)       |
+|5. Entity reference node (deprecated)    |
+|6. Entity node (deprecated)              |
+|7. Processing instruction node           |
+|8. Comment node              = comment   |
+|9. **Document node  = root node            |
+|10. Document type node                   |
+|11. Document fragment node               |
+|12. Notation node (deprecated)           |
 
 **ควรจำ
 - เวลาเรียก nodeType มันจะเรียก value ออกมา แต่อ้างถึงตัวพิมพ์ใหญ่ได้ ดูจากตารางได้
 - บางอันไม่มี NodeValue เป็น null เพราะบาง type ไม่มี
 เช่น ถ้าเป็ฯ element type จะกลายเป็นชื่อ tag => Element.tagName
 ถ้าเป็น type อื่น จะกลายเป็น # ตามด้วยชื่อ tag => "#document"
-
+------------------------------------------------------------------------------------------------------------------------
+ทุก Node มันถูกถ่ายทอดจาก Node interface
+Node interface มี property กับ method ที่ใช้ได้กับทุก node type
+------------------------------------------------------------------------------------------------------------------------
 **สิ่งระวัง 
 - เวลาเอา childNodes มาใช้ ระวัง Enter whitr space ระหว่าง tag => output เจอ whitr space แทน

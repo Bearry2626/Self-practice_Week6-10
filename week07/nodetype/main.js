@@ -7,3 +7,14 @@ if (document.firstChild.nodeType === 1) {
 } else {
   console.log("Hello, any node")
 }   
+
+// common properties
+const divElement = document.getElementById('123')
+console.log(divElement.nodeName)
+console.log(divElement.nodeType)
+console.log(divElement.nodeValue) // null เพราะ element ไม่มี nodeValu
+
+const pText = divElement.childNodes[1]
+console.log(pText.nodeName)
+console.log(pText.nodeType)
+console.log(pText.nodeValue) // มี nodeValue เพราะเป็น text node
