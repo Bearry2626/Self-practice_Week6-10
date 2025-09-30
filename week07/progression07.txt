@@ -113,3 +113,9 @@ ex. body.appendChild(pElement)
 .createTextNode = สร้าง text node
 .setAttribute = ผูก attribute เข้ากับ element (shortcut)
 .setAttributeNode = ผูก attribute เข้ากับ element (แบบละเอียด)
+
+------------------------------------------------------------------------------------------------------------------------
+**Inner text , innerHTML, textContent
+console.log(el.innerHTML); --> ตอนอยากได้ tag html
+console.log(el.innerText); --> ตอนอยากได้ text ที่เข้าใจ css
+console.log(el.textContent); --> text อย่างเดียว ไม่เข้าใจ tag html and css
