@@ -78,3 +78,38 @@ console.log(divElement.nodeValue)
 
 **สิ่งระวัง 
 - เวลาเอา childNodes มาใช้ ระวัง Enter whitr space ระหว่าง tag => output เจอ whitr space แทน
+------------------------------------------------------------------------------------------------------------------------
+**Create Element
+ถ้าอจ.ให้ dinamic create = ตอนWebpage load ไม่เคยมี node นี้ไม่เคยมี tag html นี้ และให้สร้างหลัง rander ไปแล้ว
+
+กลุ่มสร้างจะเป็น createElement, createTextNode, createAttribute
+
+create Element = .createElement("nameElement")
+ex. const pElement = document.createElement("p")
+
+create Attribute = .createAttribute("nameAttribute")
+ex. const idAttr = document.createAttribute("id")
+**อีกแบบ ไม่ต้อง setAttributeNode
+pElement.setAttribute("id", "p5")
+
+set attribute node = .setAttributeNode(idAttr)
+ex. pElement.setAttributeNode(idAttr)
+
+create text value = createTextNode("#5")
+ex. const pText = document.createTextNode("#5")
+** อีกแบบ ไม่ต้อง ppendChild pText
+pElement.texftContent = "#5" 
+
+binding text to element = .appendChild(pText)
+ex. pElement.appendChild(pText)
+
+binding element tp body = .appendChild(pElement)
+ex. body.appendChild(pElement) 
+
+** สรุปคำสั่ง
+.appendChild = ผูก node เข้าด้วยกัน เพิ่มต่อท้ายNode
+.createElement = สร้าง tag html
+.createAttribute = สร้าง attribute
+.createTextNode = สร้าง text node
+.setAttribute = ผูก attribute เข้ากับ element (shortcut)
+.setAttributeNode = ผูก attribute เข้ากับ element (แบบละเอียด)
