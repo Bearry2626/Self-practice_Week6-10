@@ -1,1 +1,4 @@
 OCT 01
+
+
+เว้นวรรคคือ หา descendant ที่มี collection เป็น list
