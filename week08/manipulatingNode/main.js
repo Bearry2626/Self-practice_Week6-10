@@ -1,4 +1,3 @@
-
 //  3. replace Beef Soup with Pork Soup
 //2.1 get its parent
 const soupUlElement = document.getElementById("soup")

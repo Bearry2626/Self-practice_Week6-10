@@ -3,10 +3,16 @@ const fnameElements = document.getElementsByName("fname")
 console.log(fnameElements.length) //2
 fnameElements.forEach((ele) => console.log(ele))
 
+
+const fnameArray = Array.from(fnameElements)
+fnameArray.forEach((ele) => {
+  console.log(ele.children)
+})
+
 //2. getElementsByTagName(), return HTMLCollection (array-like) data type
 const inputElements = document.getElementsByTagName("input")
 Array.from(inputElements).forEach((ele) => console.log(ele))
-ำภำำภกภำ
+
 //3. getElementsByClassName(), return HTMLCollection (array-like)  data type
 const veganElements = document.getElementsByClassName("vegan")
 Array.from(veganElements).forEach((ele) => console.log(ele))

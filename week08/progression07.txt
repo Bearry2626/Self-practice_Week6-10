@@ -27,7 +27,7 @@ array-like -> objectที่คล้าย Array แต่ไม่ใช่ A
 #sol 1
 Array.from()
 #sol 2
-[...]
+[...obj]
 
 ในหัวข้อนี้ มี 2 finction ที่ได้ elementเดียว / null  ที่เหลือคือ collection
 = getAttribute / querySelecter
@@ -35,4 +35,9 @@ Array.from()
 
 let items = document.getElementsByClassName("item");
 console.log(items[0].innerText); // ระบุ index แล้ว
+
+** สิ่งที่เจอมาใหม่ ถ้าเราพยายามหาจาก tag void element 
+--> มันจะขึ้น HTMLCollection { length: 0 } เพราะไม่มี child element ข้างใน
+
+ลองเขียนบางอย่างในกล่อง input แล้ว .value ดูจะขึ้นค่าที่เขียนไว้
 --------------------------------------------------------------------------------------------------------------------------------------------
