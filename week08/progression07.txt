@@ -1,9 +1,28 @@
 OCT 01
 
+Selectiing Elementd
 **ต่อ
 get children 
 1. childNodes return Nodelist (array-like with implement)
 2. children 
 --------------------------------------------------------------------------------------------------------------------------------------------
-1. querySelecter = return first element ไม่ว่าจะอยู่ตรงไหนของ document และ return node เดียว
+็HTMLColllection
+- getElementByTahName() = query ที่เรารู้ชื่อ tag
+- getElementsByClassName() = get class
+NodeList
+- getElementByName() = query ผ่าน attribute name
+- querySelecter = return first element ไม่ว่าจะอยู่ตรงไหนของ document และ return node เดียว
+- querySelecterAll = return nodelist (array-like) และ return node ทั้งหมด
 ** ใส่ css selecter (retuen nodelist)
+
+วิธีการเลือก
+1. เรารู้มัน return ผลลัพธ์อะไร
+2. เลือกให้เหมาะกับ ความเฉพาะเจาะจง ของ element ที่เราต้องการ
+3. ถ้าเลือกฟังก์ชันที่ “คืนค่าเป็น collection” ต้องระบุ index ก่อนใช้
+
+ในหัวข้อนี้ มี 2 finction ที่ได้ elementเดียว / null  ที่เหลือคือ collection
+= getAttribute / querySelecter
+** ระวังคือ เรียกใช้ function ที่คืน collecttion -> เอาไปทำงานเลย ต้องลงระดับindex ถึงได้ระดับ node ออกมา 
+
+let items = document.getElementsByClassName("item");
+console.log(items[0].innerText); // ระบุ index แล้ว

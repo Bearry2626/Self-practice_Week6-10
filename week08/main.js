@@ -21,3 +21,12 @@ meatsoup.forEach((ele) => {
     if (ele.textContent.includes("Soup")) arr.push(ele)
 })
 console.log(arr)
+
+// 3. go to the firt child element node under <ul id="soup" and display all sibling nodes>
+const soupele = document.querySelector("#soup")
+let currentNode = soupele.firstElementChild
+
+while (currentNode) {
+    console.log(currentNode)
+    currentNode = currentNode.nextElementSibling
+}
