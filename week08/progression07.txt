@@ -1,4 +1,9 @@
 OCT 01
 
-
-เว้นวรรคคือ หา descendant ที่มี collection เป็น list
+**ต่อ
+get children 
+1. childNodes return Nodelist (array-like with implement)
+2. children 
+--------------------------------------------------------------------------------------------------------------------------------------------
+1. querySelecter = return first element ไม่ว่าจะอยู่ตรงไหนของ document และ return node เดียว
+** ใส่ css selecter (retuen nodelist)
