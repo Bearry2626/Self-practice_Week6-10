@@ -6,10 +6,10 @@ get children
 1. childNodes return Nodelist (array-like with implement)
 2. children 
 --------------------------------------------------------------------------------------------------------------------------------------------
-็HTMLColllection
+็HTMLColllection -> ไม่มี foreach ให้ใช้ ต้อง convert array
 - getElementByTahName() = query ที่เรารู้ชื่อ tag
 - getElementsByClassName() = get class
-NodeList
+NodeList -> มี foreach ให้ตัวนึง ไม่ต้อง convert array
 - getElementByName() = query ผ่าน attribute name
 - querySelecter = return first element ไม่ว่าจะอยู่ตรงไหนของ document และ return node เดียว
 - querySelecterAll = return nodelist (array-like) และ return node ทั้งหมด
@@ -20,9 +20,19 @@ NodeList
 2. เลือกให้เหมาะกับ ความเฉพาะเจาะจง ของ element ที่เราต้องการ
 3. ถ้าเลือกฟังก์ชันที่ “คืนค่าเป็น collection” ต้องระบุ index ก่อนใช้
 
+array-like -> objectที่คล้าย Array แต่ไม่ใช่ Array จริง ๆ
+1. มี length
+2. เข้าถึง index ได้
+แต่ใช้ method ของ array ได้ -> ต้องแปลงเป็น array 
+#sol 1
+Array.from()
+#sol 2
+[...]
+
 ในหัวข้อนี้ มี 2 finction ที่ได้ elementเดียว / null  ที่เหลือคือ collection
 = getAttribute / querySelecter
 ** ระวังคือ เรียกใช้ function ที่คืน collecttion -> เอาไปทำงานเลย ต้องลงระดับindex ถึงได้ระดับ node ออกมา 
 
 let items = document.getElementsByClassName("item");
 console.log(items[0].innerText); // ระบุ index แล้ว
+--------------------------------------------------------------------------------------------------------------------------------------------
