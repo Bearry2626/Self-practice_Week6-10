@@ -3,7 +3,7 @@ const fnameElements = document.getElementsByName("fname")
 console.log(fnameElements.length) //2
 fnameElements.forEach((ele) => console.log(ele))
 
-
+// ลองแปลงเป็น arrayแล้วค่อยใช้ forEach เแล้วลองหา children ดู
 const fnameArray = Array.from(fnameElements)
 fnameArray.forEach((ele) => {
   console.log(ele.children)
@@ -20,9 +20,8 @@ Array.from(veganElements).forEach((ele) => console.log(ele))
 //4. find the first element of document that has an ID values "appetizer" or "soup"
 const firstElement = document.querySelector("#appetizer, #soup")
 console.log(firstElement)
-//5. find all class "meat" elements under <ul id="appetizer"> or <ul id="soup"> only
 
-// find all class "meat" elemet under <ul id = "appetizer"> or <ul id="soup"> only
+//5. find all class "meat" elements under <ul id="appetizer"> or <ul id="soup"> only
 const meatElemet = document.querySelectorAll("#appetizer .meat, #soup .meat")
 meatElemet.forEach((ele) => console.log(ele))
  
