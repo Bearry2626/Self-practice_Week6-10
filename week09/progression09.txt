@@ -11,6 +11,15 @@ Event Propagation
     1.3 Bubbling Phase
         ทิศทาง : จากล่าง ขึ้นบน
         หลังจาก Event เกิดขึ้น มันจะ ลอยกลับขึ้นไป ผ่านโหนดพาเรนต์จนถึง Root Node
-        Capturing:  document → html → body → div → button
-Target:     button
-Bubbling:   button → div → body → html → document
+
+Capturing:  document → html → body → div → button   |
+Target:     button                                  |
+Bubbling:   button → div → body → html → document   |
+____________________________________________________|
+
+
+Event Handlers
+Ways of Using Web Events
+อาจารย์ไม่แนะนำวิธี Event Handlers Properties -> โค้ดอ่านยาก (Low Readability), แลยาก (Unmaintainable)
+
+2. Adding and removing event handlers
