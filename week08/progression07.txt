@@ -38,6 +38,14 @@ console.log(items[0].innerText); // ระบุ index แล้ว
 
 ** สิ่งที่เจอมาใหม่ ถ้าเราพยายามหาจาก tag void element 
 --> มันจะขึ้น HTMLCollection { length: 0 } เพราะไม่มี child element ข้างใน
-
 ลองเขียนบางอย่างในกล่อง input แล้ว .value ดูจะขึ้นค่าที่เขียนไว้
+
+** จากโจทย์ข้อนี้
+//5. find all class "meat" elements under <ul id="appetizer"> or <ul id="soup"> only
+const meatElemet = document.querySelectorAll("#appetizer .meat, #soup .meat")
+meatElemet.forEach((ele) => console.log(ele))
+
+จะเห็นว่าใน querySelectorAll มี elementหลายตัว 
+ในความหายของ  #appetizer .meat = lement ที่มี class = meat ที่อยู่ภายใน id = appetizer
+** มีช่องว่างระหว่างกัน หมายถึง อยู่ข้างใน (เป็นลูกหรือหลานของ)
 --------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,16 @@
+Oct 08 
+
+Event Propagation
+1. Three Phases of Event Flow
+    1.1 Capturing Phase 
+        ทิศทาง : จากบน ลงล่าง 
+        เหตุการณ์เริ่มจาก Root Node ของ DOM แล้ว “ไหลลง” มาจนถึง Target Node (จุดเกิดเหตุ) ในความสัมพันะ์แบบ ancestor–descendant
+    1.2 Target Phase 
+        ทิศทาง : อยู่ที่จุดเกิดเหตุ
+        เป็นช่วงที่ Event เกิดขึ้นจริง ที่ Node เป้าหมาย เช่น ปุ่มที่ถูกคลิก
+    1.3 Bubbling Phase
+        ทิศทาง : จากล่าง ขึ้นบน
+        หลังจาก Event เกิดขึ้น มันจะ ลอยกลับขึ้นไป ผ่านโหนดพาเรนต์จนถึง Root Node
+        Capturing:  document → html → body → div → button
+Target:     button
+Bubbling:   button → div → body → html → document

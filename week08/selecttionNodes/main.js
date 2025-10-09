@@ -21,6 +21,8 @@ Array.from(veganElements).forEach((ele) => console.log(ele))
 const firstElement = document.querySelector("#appetizer, #soup")
 console.log(firstElement)
 
+// ของเพื่อน
+
 //5. find all class "meat" elements under <ul id="appetizer"> or <ul id="soup"> only
 const meatElemet = document.querySelectorAll("#appetizer .meat, #soup .meat")
 meatElemet.forEach((ele) => console.log(ele))
