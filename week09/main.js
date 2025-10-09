@@ -1,7 +1,13 @@
-const aLink = document.querySelector("a");
-aLink.addEventListener("clink", (event) => {
-    event.preventDefault() // ทำหน้าที่ ป้องกันการทำงานปกติของลิงก์
-    console.log("WEB VISIT");
+const submit = document.querySelector("div > button");
+console.log(submit);
+// 1. add event with annonymous handle function
+submit.addEventListener("click", () => {
+    console.log('clicked');
 })
 
+// 2. add event wth named fucction
+const submitNameFunc = () => {
+    console.log("youer clicked");
+}
 
+submit.addEventListener("click", submitNameFunc);

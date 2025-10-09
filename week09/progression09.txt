@@ -16,10 +16,41 @@ Capturing:  document → html → body → div → button   |
 Target:     button                                  |
 Bubbling:   button → div → body → html → document   |
 ____________________________________________________|
-
+--------------------------------------------------------------------------------------------------------------------------------------------
 
 Event Handlers
 Ways of Using Web Events
-อาจารย์ไม่แนะนำวิธี Event Handlers Properties -> โค้ดอ่านยาก (Low Readability), แลยาก (Unmaintainable)
+อาจารย์ไม่แนะนำวิธี Event Handlers Properties -> โค้ดอ่านยาก (Low Readability), ดูแลยาก (Unmaintainable)
 
 2. Adding and removing event handlers
+addEventListener() - add event ชื่อ type เดียวกันได้มากกว่าหนึ่ง และได้หลายevent
+removeEventListener() - ให้เขียน parameter patrenเดียวกับที่ add มา แต่จัดการ anonymous function ไม่ได้
+
+จะมี 3 argument เราต้องรู้
+1. event type
+2. event handler or listerner function anonymous มั้ย
+3. ให้eventมัน  propergat บนลงล่าง หรือล่างขึ้นบน
+    Capture - > true
+    bubble -> false
+default -> bubble 
+
+การเขียนจะเป็น event -> event handler ->
+ชนิดของเหตุการณ์ -> สิ่งที่ให้ทำเมื่อเกิดเหตุการณ์ -> ทิศทางการไหลของเหตุการณ์
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Event Object
+เมื่อมี event เกิดขึ้นใน DOM ข้อมูลทั้งหมดที่เกี่ยวข้องกับ event นั้นจะถูกเก็บไว้ใน object ที่ชื่อว่า event ซึ่งจะถูกส่งเป็นพารามิเตอร์เข้าไปใน event handler function (ฟังก์ชันที่ใช้จัดการ event)
+
+ใน event object จะมีข้อมูลสำคัญ
+- องค์ประกอบ (element) ที่ทำให้เกิด event
+- ชนิดของ event ที่เกิดขึ้น (event type)
+- ข้อมูลเฉพาะของ event นั้น 
+    - ถ้าเป็น mouse event -> จะมีข้อมูลตำแหน่งของเมาส์
+    - ถ้าเป็น keyboard event -> จะมีข้อมูลคีย์ที่ถูกกด
+
+ในการทำ addEventListener มี 2 แบบ
+1. Anonymous Function - ใช้ ครั้งเดียว ไม่ต้องเรียกซ้ำ เหมาะกับ งานเล็ก ๆ หรือ ปุ่มเดียว
+2. Named Function - ใช้ ฟังก์ชันชื่อ เหมาะกับ หลายปุ่ม -> สามารถ reuse function เดิมได้
+                  - จำเป็นถ้าเราต้องใช้ removeEventListener เพราะต้องอ้างชื่อฟังก์ชัน
+
+**ถ้าใช้ anonymous function จะ remove ไม่ได้
