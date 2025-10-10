@@ -54,3 +54,12 @@ Event Object
                   - จำเป็นถ้าเราต้องใช้ removeEventListener เพราะต้องอ้างชื่อฟังก์ชัน
 
 **ถ้าใช้ anonymous function จะ remove ไม่ได้
+
+event.eventPhase จะคืนค่าเป็นเลข ตามflow ที่มันไหล
+| --| ----------------| ------------------------------------------------------------------- |
+| 1 | Capturing phase | Event กำลัง “ไหลลงมา” จาก root (เช่น document) มายัง target  |
+| 2 | Target phase    | Event มาถึง element ที่เป็น target แล้ว (เช่นปุ่มที่เราคลิก)                        |
+| 3 | Bubbling phase  | Event “ไหลกลับขึ้น” ไปยัง ancestor element ต่าง ๆ                           |
+
+event.target = คลิกที่ไหน เกิดขึ้นที่นั่น
+event.currentTarget = element ที่ event listener ถูกผูกอยู่กับมัน -> จุดที่ handler นี้ “กำลังทำงานอยู่”
