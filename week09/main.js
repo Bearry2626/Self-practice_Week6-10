@@ -46,14 +46,54 @@
 
 
 // ถ้าเขียนแบบนี้เขียนเยอะมาก สามารถย่อลงมาได้
-const submitButton = document.querySelector("button")
-const displayMessage = (event) => {
-    console.log("Hay")
-}
-submitButton.addEventListener("click", displayMessage)
+// ทำให้สามารถแชร์ function ได้ทุกElement common propoties ร่วม
+// const submitButton = document.querySelector("button")
+// const displayMessage = (event) => {
+//     console.log("Hay")
+// }
+// submitButton.addEventListener("click", displayMessage)
 
+// const divElement = document.querySelector("div")
+// divElement.addEventListener("click div", displayMessage) 
+
+// const bodyElement = document.body
+// bodyElement.addEventListener("click body", displayMessage) 
+
+// ของต้น
+const bolt = document.querySelector('img')
+const submitbutton = document.querySelector("div>button")
 const divElement = document.querySelector("div")
-divElement.addEventListener("click div", displayMessage) 
+const bodyElement = document.querySelector("body")
+ 
+function logEvent(event, message) {
+    // console.log('target:', event.target)
+    // console.log('currentTarget:', event.currentTarget)
+    // console.log('eventPhase:', event.eventPhase)
+    if (message) console.log(message)
+}
+ 
+if (submitbutton) {
+    submitbutton.addEventListener('click', (event) => {
+        logEvent(event, "Submit button was clicked!")
+    })
+}
+ 
+if (divElement) {
+    divElement.addEventListener('click', (event) => {
+        logEvent(event, "Div was clicked!!")
+    })
+}
+ 
+if (bodyElement) {
+    bodyElement.addEventListener('click', (event) => {
+        logEvent(event, "body was clicked!!")
+    })
+}
 
-const bodyElement = document.body
-bodyElement.addEventListener("click body", displayMessage) 
+// code ที่ต้นทำมามันเป็น เทคนิคการ forword event
+// เรียนขึ้นมา จะโยนไปให้ hander function
+// ปกติ browser จะโยน event มาที่ hander function จุดเดียว = เราต้องforword ไปเอง
+// พอได้ forword จะได้ attach the event informationไปต่อที่ funvtion ที่สอง
+
+// curent target กับ target ไม่จำเป้ฯต้องเป็น node เดียวกัน และมีโอกาสเป็นnode เดียวกัน มันจะ “เป็น node เดียวกัน” เฉพาะตอนที่อีเวนต์นั้นเกิดขึ้นที่ตัว element นั้นโดยตรง
+
