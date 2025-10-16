@@ -93,3 +93,8 @@ Click event
 
 ลไดับการทำงาน 
 mousedown -> mouseup -> click
+
+click - คลิกเพื่อสั่งการ
+mousedown / mouseup - ตรวจจับการลาก (dragging)
+mouseover / mouseout - ทำเอฟเฟกต์ hover
+mousemove - ติดตามตำแหน่งเมาส์
